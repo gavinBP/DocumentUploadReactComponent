@@ -1,0 +1,43 @@
+body {
+    
+}
+
+.testing-center {
+    display: flex;
+    flex-direction: row;
+    margin-bottom: 12px;
+}
+
+.miniClock {
+    height: 30px;
+    margin-left: 30px;
+    display: flex;
+    align-items: center;
+}
+
+.QuestionBlockQuestion {
+    flex: 1;
+    padding: 10px;
+    text-align: left;
+    color: #203c6c;
+    font-weight: bold;
+}
+
+.QuestionBlockAnswer {
+    color: #203c6c;
+    padding-left: 10px;
+}
+
+.line {
+    width: 100%;
+    border-top: 1px solid #000;
+    margin:  20px;
+    opacity: 20%;
+}
+
+.QuestionBlockSection {
+    display: flex;
+    align-items: left;
+    flex-direction: column;
+    max-width: 300px;
+}

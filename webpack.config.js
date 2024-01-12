@@ -27,6 +27,21 @@ module.exports = {
                         presets: ['@babel/preset-env', '@babel/preset-react'] 
                     }
                 }
+            },
+            {
+                test: /\.css$/,
+                use: ['style-loader', 'css-loader']
+            },
+            {
+                test: /\.(jpg|jpeg|png|gif)$/i,
+                use: [
+                    {
+                        loader: 'file-loader',
+                        options: {
+                            outputPath: 'images',
+                        }
+                    }
+                ]
             }
         ]
     }
