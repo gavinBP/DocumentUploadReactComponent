@@ -2,6 +2,18 @@ body {
     
 }
 
+.mainInfoDiv {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+}
+
+.header {
+    font-size: xx-large;
+    color:#203c6c
+}
+
 .testing-center {
     display: flex;
     flex-direction: row;
@@ -35,9 +47,48 @@ body {
     opacity: 20%;
 }
 
+.miniVertLine {
+    border-left: 1px solid #000;
+    margin-right: 20px;
+    margin-top: 10px;
+    height: 20px;
+    opacity: .2; /* Adjust the opacity value if needed */
+  }
+
 .QuestionBlockSection {
     display: flex;
     align-items: left;
     flex-direction: column;
     max-width: 300px;
+}
+
+.toleranceWindowOptions {
+    display: flex;
+    flex-direction: row;
+}
+
+.uploadBox {
+    display: flex;
+    flex-direction: column ;
+    justify-content: center;
+    align-items: center;
+    height: 200px;
+    width: 400px;
+    border: 2px solid #dedbdb;
+    border-radius: 10px;
+    /* opacity: .50; */
+    padding: 10px;
+}
+
+.dropZone {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    height: 150px;
+    width: 360px;
+    border: 2px dashed #dedbdb;
+    border-radius: 10px;
+    /* opacity: .40; */
+    padding: 15px;
 }

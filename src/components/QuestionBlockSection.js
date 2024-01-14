@@ -9,11 +9,11 @@ function QuestionBlockSection(props) {
     return (
         <>
             <div className='QuestionBlockSection'>
-                <QuestionBlock question={"Split schedule using social distancing?"} optionOne={"Yes"} optionTwo={"No"} noOptions={false}/>
+                <QuestionBlock question={"Split schedule using social distancing?"} optionOne={"Yes"} optionTwo={"No"} noOptions={false} isToleranceWindow={false} />
                 <div className='line'></div>
-                <QuestionBlock question={"Location Checking:"} noOptions={true}/>
+                <QuestionBlock question={"Location Checking:"} noOptions={true} statement={"All Available!"} isToleranceWindow={false}/>
                 <div className='line'></div>
-                <QuestionBlock question={"Client:"} optionOne={"Single"} optionTwo={"Mulitple"} noOptions={false}/>
+                <QuestionBlock question={"Client:"} optionOne={"Single"} optionTwo={"Mulitple"} noOptions={false} isToleranceWindow={false}/>
             </div>
         </>
     )
