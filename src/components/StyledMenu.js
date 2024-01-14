@@ -51,7 +51,7 @@ const StyledMenu = styled((props) => (
   },
 }));
 
-export default function CustomizedMenus() {
+export default function CustomizedMenus(props) {
   const [anchorEl, setAnchorEl] = React.useState(null);
   const open = Boolean(anchorEl);
   const handleClick = (event) => {
@@ -61,9 +61,28 @@ export default function CustomizedMenus() {
     setAnchorEl(null);
   };
 
+  const name = props.name;
+  const addPaddingRight = props.addPaddingRight;
+
   return (
     <div>
-      <Button
+      {addPaddingRight ? (<Button
+        id="demo-customized-button"
+        aria-controls={open ? 'demo-customized-menu' : undefined}
+        aria-haspopup="true"
+        aria-expanded={open ? 'true' : undefined}
+        variant="contained"
+        disableElevation
+        onClick={handleClick}
+        endIcon={<KeyboardArrowDownIcon />}
+        style={{backgroundColor: "white",
+            color: "#203c6c",
+            border: "1px solid black",
+            borderRadius: "10px",
+            paddingRight:"210px"}}
+      >
+        {name}
+      </Button>): (<Button
         id="demo-customized-button"
         aria-controls={open ? 'demo-customized-menu' : undefined}
         aria-haspopup="true"
@@ -77,8 +96,8 @@ export default function CustomizedMenus() {
             border: "1px solid black",
             borderRadius: "10px"}}
       >
-        Select Client
-      </Button>
+        {name}
+      </Button>)}
       <StyledMenu
         id="demo-customized-menu"
         MenuListProps={{
